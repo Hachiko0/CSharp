@@ -1,0 +1,132 @@
+﻿html, body, header, h1, h2, h3, h4, h5, img, p, input, select, option, ul, l {
+    margin:0px;
+    padding:0px;
+}
+
+#main-header {
+    text-align:center;
+}
+
+#logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto 
+}
+
+#welcome-message {
+    margin-top:50px;
+    margin-bottom:20px;
+    letter-spacing:5px;
+    position: relative;
+    left: 15px;
+}
+
+#welcome {
+    width: 300px;
+    margin: 0 auto;
+}
+
+#info {
+    margin-top:80px;
+    float:left;
+    width:400px;
+    font-weight:700;
+    text-align:justify;
+    position: relative;
+    top: 50px;
+}
+
+ul {
+    list-style-type:none;
+}
+
+ul#jeans-list li {
+    float:left;
+    margin-right:15px;
+    margin-bottom:15px;
+    cursor: pointer; 
+    
+}
+
+#jeans-list {
+    width:80%;
+    margin-top:20px;
+}
+
+#jeans-list span {
+    display:block;
+    text-align:center;
+}
+li img {
+    width:100px;
+    height:100px;
+}
+
+#full-content {
+    display:inline-block;
+}
+
+#full-content-img {
+    width:250px;
+    height:300px;
+}
+
+#all-ps {
+    text-align:center;
+    text-align:justify;
+}
+
+#choose-season img{
+    border:2px solid black;
+}
+
+#choose-season div {
+    display:inline-block;
+    position:relative;
+    top:170px;
+}
+#choose-season div:first-child  {
+    left:70px;
+}
+#choose-season div:last-child {
+    left:300px;
+}
+
+#choose-season img:hover, .choose-clothes img:hover, #jeans-list img:hover {
+    opacity:0.7;
+}
+
+.choose-clothes img {
+    width:200px;
+    height:200px;
+}
+
+.choose-clothes div {
+    display:inline-block;
+    margin-right:25px;
+    margin-top:25px;
+}
+
+.choose-clothes {
+    text-align:center;
+}
+a {
+    display:inline-block;
+}
+
+#price {
+    position:relative;
+    left:400px;
+    float:right;
+    top:-210px;
+    font-weight:700;
+    width:360px;
+    text-align:left;
+}
+#in-progress {
+    color:red;
+    font-size:30px;
+    position:relative;
+    top:250px;
+    left:200px;
+}

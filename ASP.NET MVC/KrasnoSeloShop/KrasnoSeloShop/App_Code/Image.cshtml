@@ -1,0 +1,13 @@
+﻿@helper CreateLink(string imageUrl, string actionName, string controllerName) 
+{
+    <a href="/@controllerName/@actionName">
+        <img src="@imageUrl"/>
+    </a>
+}
+
+@helper CreateLink(string imageUrl, string actionName)
+{
+    <a href="/@actionName">
+        <img src="@imageUrl" />
+    </a>
+}

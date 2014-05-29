@@ -1,0 +1,17 @@
+﻿@using KrasnoSeloShop.ViewModels
+@using System.Web.Mvc.Ajax
+@using KrasnoSeloShop.Models
+@model IEnumerable<TShirtModel>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var dictionary = new Dictionary<string,string>();
+    dictionary["action"] = "Tshirts";
+    dictionary["controller"] = "Catalogues";
+}
+
+@Html.Partial("_SortProductsDropDown",dictionary)
+<ul id="jeans-list">
+    @Html.Partial("Partial", this.Model)
+</ul>
+<div id="full-content">
+</div>

@@ -1,0 +1,21 @@
+﻿@using KrasnoSeloShop.ViewModels
+@using System.Web.Mvc.Ajax
+@using KrasnoSeloShop.Models
+@model IEnumerable<IClothModel>
+@{
+    var partialViewURL = (string)this.ViewBag.Action;
+}
+@foreach (var item in this.Model)
+{
+    <li>
+        @Ajax.ImageActionLink(@item.URL, partialViewURL, "Catalogues", new { id = @item.ID },
+             new AjaxOptions
+             {
+                 HttpMethod = "POST",
+                 InsertionMode = InsertionMode.Replace,
+                 UpdateTargetId = "full-content"
+             }
+        )
+        <span>Цена:@item.Price лв</span>
+    </li>
+}

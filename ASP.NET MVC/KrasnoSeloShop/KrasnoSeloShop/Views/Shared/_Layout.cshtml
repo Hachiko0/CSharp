@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин за дрехи</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+	<link href="@Url.Content("~/Content/kendo/2014.1.415/kendo.common.min.css")" rel="stylesheet" type="text/css" />
+	<link href="@Url.Content("~/Content/kendo/2014.1.415/kendo.dataviz.min.css")" rel="stylesheet" type="text/css" />
+	<link href="@Url.Content("~/Content/kendo/2014.1.415/kendo.default.min.css")" rel="stylesheet" type="text/css" />
+	<link href="@Url.Content("~/Content/kendo/2014.1.415/kendo.dataviz.default.min.css")" rel="stylesheet" type="text/css" />
+	<script src="@Url.Content("~/Scripts/kendo/2014.1.415/jquery.min.js")"></script>
+	<script src="@Url.Content("~/Scripts/kendo/2014.1.415/kendo.all.min.js")"></script>
+	<script src="@Url.Content("~/Scripts/kendo/2014.1.415/kendo.aspnetmvc.min.js")"></script>
+	<script src="@Url.Content("~/Scripts/kendo.modernizr.custom.js")"></script>
+    <script src="@Url.Content("~/Scripts/jquery.unobtrusive-ajax.min.js")"> </script>
+
+</head>
+<body >
+    <div id="header">
+        <img id="logo" src="~/Images/jeans-logo.jpg" />
+        <h1 id="main-header">Красно село Магазин</h1>
+    </div>
+    <div class="container body-content">
+        @(Html.Kendo()
+        .Menu()
+        .Name("main-menu")
+        .Direction(MenuDirection.Bottom)
+        .Items(item =>
+        {
+            item.Add().Text("Начало").Action("Index", "MyHome");
+            item.Add().Text("Каталог").Action("Seasons", "Catalogues");
+            item.Add().Text("За нас").Action("About", "MyHome");
+            item.Add().Text("Контакти").Action("Contacts", "MyHome");
+
+        })
+        )
+        @RenderBody()
+    </div>
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)        
+</body>
+</html>

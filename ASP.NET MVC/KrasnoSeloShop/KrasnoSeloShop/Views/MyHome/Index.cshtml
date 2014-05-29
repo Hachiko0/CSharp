@@ -1,0 +1,30 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var welcome = "Добре дошли";
+    var catalogue = "Catalogues";
+    var number = new Random().Next(1, 13);
+}
+
+<p id="info">Предлагаме мъжки, дамски и детски облекла : тениски, ризи, дънки, панталони, поли, рокли, суитчери, якета, анцузи, бански, сукмани, къси панталони, шорти и д.р. 
+    Имаме както официални, така и спортни и спортно-елегантни дрехи. За мъжете има класика, включваща големи размери, а за младежите по-модерни облекла.
+    Нашият магазин може да се похвали с ниски цени и високо качество.
+</p>
+<div id="welcome">
+    <h1 id="welcome-message">@welcome</h1>
+
+    <img src="~/Images/Main-logo/@(number).jpg" />
+    <p id ="price">
+        Ориентировъчни цени(варират според модела):
+            @Html.ActionLink("Дамски дънки: 25лв - 39лв ", "Jeans",catalogue) <br />
+            @Html.ActionLink("Мъжки дънки - младежка мода : 25лв - 39лв ", "Jeans", catalogue) <br />
+            @Html.ActionLink("Мъжки дънки - класика : 30лв - 38лв ", "Jeans", catalogue) <br />
+            @Html.ActionLink("Дамски бански Feba 40лв - 55лв", "Swimsuits", catalogue) <br/>
+            @Html.ActionLink("Тениски : 15лв - 25лв", "Tshirts", catalogue) <br/>
+            Блузи: 15лв - 30лв <br /
+            Мъжки ризи: 25лв - 35лв <br />
+            Рокли: 25лв - 49лв <br />
+            Поли: 30лв - 39лв <br />
+            Шорти: 20лв - 28лв <br />
+    </p> 
+</div>
+

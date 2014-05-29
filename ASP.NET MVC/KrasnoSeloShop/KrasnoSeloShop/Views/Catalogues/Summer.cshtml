@@ -1,0 +1,15 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    IList<string> clothesURL = new List<string>() { "jeans", "swimsuits", "tshirts", "blouses", "shorts", "skirts", "short-jeans", "dresses" };
+    IList<string> actionsName = new List<string>() { "Jeans", "Swimsuits", "Tshirts", "InProgress", "InProgress", "InProgress", "InProgress", "InProgress" };
+}
+
+<div class="choose-clothes">
+    @{for (int i = 0; i < clothesURL.Count; i++)
+    {
+        var imageUrl = "/Images/" + clothesURL[i] + "-main.jpg";
+        <div>
+            @Image.CreateLink(imageUrl, actionsName[i]);
+        </div> 
+    } }
+</div>

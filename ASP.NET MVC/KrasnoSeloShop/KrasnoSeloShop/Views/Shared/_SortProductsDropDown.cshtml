@@ -1,0 +1,20 @@
+﻿@model IDictionary<string,string>
+@{
+    //var selectListItems = new List<SelectListItem>() {
+    //    new SelectListItem { Text = "Цена", Value = "price" },
+    //    new SelectListItem { Text = "Размер", Value = "size" },
+    //    new SelectListItem {Text = "Цвят", Value = "color" }
+    //};
+    var selectListItems = ((List<SelectListItem>)this.ViewBag.selectListItems);
+}
+@using (Ajax.BeginForm(@Model["action"],@Model["controller"], new AjaxOptions
+    {
+        HttpMethod = "Post",
+        InsertionMode = InsertionMode.Replace,
+        UpdateTargetId = "jeans-list"
+    }))
+{
+    @Html.DropDownList("criteria", selectListItems, new { id = "criteria-list"})
+    <input type="submit" value="Сортирай със AJAX" />
+}
+

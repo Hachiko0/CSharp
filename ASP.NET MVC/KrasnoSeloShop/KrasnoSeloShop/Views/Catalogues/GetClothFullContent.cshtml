@@ -1,0 +1,15 @@
+﻿@using KrasnoSeloShop.Models
+@model ICloth
+
+@{if (Request.IsAjaxRequest())
+{
+    <img id="full-content-img" src="@this.Model.URL" />
+    <div id="all-ps">
+        <p>Артикул: @Html.DisplayFor(item => item.ID)</p>
+        <p>Цвят: @Html.DisplayFor(item => item.Color)</p>
+        <p>Цена: @Html.DisplayFor(item => item.Price) лв</p>
+        <p>Размер: @Html.DisplayFor(item => item.Size)</p>
+        <p>В наличност: @(this.Model.IsAvailable == true ? "Да" :"Не")</p>
+    </div>
+}
+}
